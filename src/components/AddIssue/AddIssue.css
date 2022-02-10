@@ -1,0 +1,31 @@
+form label,
+label input,
+label select {
+    display: block;
+    text-align: left;
+    color: black;
+}
+
+label input,
+label select {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+form label {
+    margin-top: 20px;
+}
+
+form button {
+    border-radius: 5px;
+    background: var(--red);
+    color: white;
+    border: none;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    -mox-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    padding: 15px 30px;
+    font-size: 16px;
+    margin-top: 15px;
+}

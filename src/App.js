@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import AddIssue from "./components/AddIssue/AddIssue.js";
+import CurrentIssue from "./components/CurrentIssue/CurrentIssue";
+import "./App.css";
 
 function App() {
+  const[addIssue, setAddIssue] = useState(true);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Bug Tracker</h1>
+      <div className="grey-card-container">
+      { addIssue ? <AddIssue /> : <CurrentIssue /> }
+      </div>
+      <div>
+        <button>Current Issues</button>
+        <button>Add Issue</button>
+      </div>
     </div>
   );
 }
