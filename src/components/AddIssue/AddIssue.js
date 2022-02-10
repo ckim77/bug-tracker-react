@@ -1,16 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import "./AddIssue.css";
 
 
 function AddIssue() {
-  const[addIssue, setAddIssue] = useState(true);
+  const [desc, setDes] = useState(true);
+  const [dev, setDev] = useState(true);
+  const [priority, setpriority] = useState(true);
+
   
   return (
     <div className="add-issue">
       <form>
           <label>
               Description
-              <input type='text' />
+              <input type='text' placeholder="Describe Issue" className="desc-box"/>
           </label>
 
           <label>
